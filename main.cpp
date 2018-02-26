@@ -12,29 +12,9 @@ DigitalOut ledFour(LED4, 1);
 Thread spi_thread;
 
 void thread_spi() {
-    int i = 0;
     while (true) {
-        if (i == 0) {
-            ledRed = !ledRed;
-        }
-        else if (i == 1) {
-            ledBlue = !ledBlue;
-        }
-        else if (i == 2) {
-            ledGreen = !ledGreen;
-        }
-        else {
-            ledFour = !ledFour;
-        }
-
-        if (i > 2) {
-            i = 0;
-        }
-        else {
-            i++;
-        }
-
-        wait_ms(100);
+        ledFour = !ledFour;
+        wait_ms(200);
     }
 }
 
