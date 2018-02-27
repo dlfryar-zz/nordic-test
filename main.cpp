@@ -22,7 +22,7 @@ int main()
 {
     spi_thread.start(thread_spi);
 
-#ifdef NRF52
+#if 1
     GnssI2C gnss(p26, p27);
 #else
     GnssI2C gnss(I2C_SDA, I2C_SCL);
